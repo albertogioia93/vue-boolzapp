@@ -94,6 +94,15 @@ MINICONTAINER-DX
     background-color: #eaeaea;
 }
 
+.header-dx {
+    display: flex;
+    align-items: center; /* per allineare verticalmente */
+    justify-content: center; /* per allineare orizzontalmente */
+    border-left: 2px solid black;
+    height: 42px;
+    background-color: #eaeaea;
+  }
+
 .main-dx {
     flex-grow: 1;
     background-color: aquamarine;

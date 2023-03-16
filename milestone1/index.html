@@ -31,7 +31,7 @@
                     <section class="campanella-notifiche"></section>
                     <section class="cerca-chat"></section>
                     <ul>
-                        <li v-for="contatto in contatti" :key="contatto.nome">
+                        <li v-for="(contatto, index) in contatti" :key="index" @click="selezionaContatto(contatto)">
                             <img :src="contatto.avatar" :alt="contatto.nome">
                             <div class="info-contatto">
                                 <h3>{{ contatto.nome }}</h3>
@@ -46,7 +46,10 @@
 
             <!-- minicontenitore di dx -->
             <div class="minicontainer-dx">
-                <header class="header-dx"></header>
+                <header class="header-dx" v-if="contattoSelezionato">
+                    <img :src="contattoSelezionato.avatar" alt="">
+                    <h3>{{ contattoSelezionato.nome }}</h3>
+                </header>
                 <main class="main-dx"></main>
                 <footer class="footer-dx"></footer>
 
