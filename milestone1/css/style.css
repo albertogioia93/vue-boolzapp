@@ -1,7 +1,7 @@
 /* 
-**********************************************************************************
+*************
 RESET
-**********************************************************************************
+*************
 */
 
 * {
@@ -11,9 +11,9 @@ RESET
 }
 
 /* 
-**********************************************************************************
+*************
 MAIN
-**********************************************************************************
+*************
 */
 
 
@@ -24,6 +24,12 @@ MAIN
     margin: 20px auto;
     display: flex;
 }
+
+/* 
+*************
+MINICONTAINER-SX
+*************
+*/
 
 .minicontainer-sx {
     width: 320px;
@@ -42,6 +48,7 @@ MAIN
     display: flex;
     flex-direction: column;
     flex: 1;
+    overflow: hidden;
 }
 
 .campanella-notifiche {
@@ -54,10 +61,18 @@ MAIN
     background-color: #eaeaea;
 }
 
-.utenti {
+.main-sx ul {
     flex: 1;
     background-color: yellow;
+    list-style-type: none;
+    overflow: auto;
 }
+
+/* 
+*************
+MINICONTAINER-DX
+*************
+*/
 
 .minicontainer-dx {
     width: 100%;
