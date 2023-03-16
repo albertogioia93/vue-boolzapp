@@ -6,6 +6,20 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
+        contatti: [
+            {
+                nome: 'Michele',
+                avatar: 'img/avatar_1.jpg'
+            },
+            {
+                nome: 'Fabio',
+                avatar: 'img/avatar_2.jpg'
+            },
+            {
+                nome: 'Samuele',
+                avatar: 'img/avatar_3.jpg'
+            },
+        ]
       
     }
   }

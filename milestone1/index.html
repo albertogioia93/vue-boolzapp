@@ -31,54 +31,15 @@
                     <section class="campanella-notifiche"></section>
                     <section class="cerca-chat"></section>
                     <ul>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                        <li>icona</li>
-                     
-                        
+                        <li v-for="contatto in contatti" :key="contatto.nome">
+                            <img :src="contatto.avatar" :alt="contatto.nome">
+                            <div class="info-contatto">
+                                <h3>{{ contatto.nome }}</h3>
+                                <p>Ultimo messaggio</p>
+                            </div>
+                        </li>
                     </ul>
+                    
                 </main>
 
             </div>

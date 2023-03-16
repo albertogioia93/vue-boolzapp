@@ -68,6 +68,14 @@ MINICONTAINER-SX
     overflow: auto;
 }
 
+.main-sx ul li {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    margin: 10px;
+
+}
+
 /* 
 *************
 MINICONTAINER-DX
