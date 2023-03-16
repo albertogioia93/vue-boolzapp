@@ -42,6 +42,33 @@ MINICONTAINER-SX
 .header-sx {
     height: 42px;
     background-color: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img-nome {
+    display: flex;
+    align-items: center;
+}
+
+.img-container {
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    background-color: red;
+}
+
+.sofia {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.icone {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: #b1b1b1;
 }
 
 .main-sx {
