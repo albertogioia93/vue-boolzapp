@@ -11,4 +11,3 @@ createApp({
   }
 }).mount('#app')
 
-console.log('BUONGIORNO');
