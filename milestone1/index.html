@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
     <!-- collegamento a font awesome via CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -44,8 +49,22 @@
                 </header>
 
                 <main class="main-sx">
-                    <section class="campanella-notifiche"></section>
-                    <section class="cerca-chat"></section>
+
+                    <section class="sezione-campanella-notifiche">
+                        <div class="container-campanella">
+                            <i class="fa-solid fa-bell-slash"></i>
+                        </div>
+                        <div class="ricevi-notifiche">
+                            <div>Ricevi notifiche di nuovi messaggi</div>
+                        </div>
+
+                    </section>
+
+                    <section class="cerca-chat">
+                        <input type="text" placeholder="cerca una chat">
+                        <!-- per mettere un font awesome dentro input di ricerca -->
+                        <!-- placeholder="&#xF002; Search" style="font-family:Arial, FontAwesome;" -->
+                    </section>
                     <ul>
                         <li v-for="(contatto, index) in contatti" :key="index" @click="selezionaContatto(contatto)">
                             <img :src="contatto.avatar" :alt="contatto.nome">

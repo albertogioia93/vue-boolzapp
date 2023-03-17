@@ -8,7 +8,9 @@ RESET
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
 }
+
 
 /* 
 *************
@@ -78,14 +80,36 @@ MINICONTAINER-SX
     overflow: hidden;
 }
 
-.campanella-notifiche {
+.sezione-campanella-notifiche {
     height: 50px;
     background-color: #91dafa;
+    display: flex;
+    align-items: center;
+}
+
+.container-campanella {
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #91dafa;
+}
+
+.ricevi-notifiche {
+    font-size: 14px;
 }
 
 .cerca-chat {
     height: 30px;
     background-color: #eaeaea;
+    padding: 5px;
+}
+
+input {
+    height: 100%;
 }
 
 .main-sx ul {
@@ -123,17 +147,20 @@ MINICONTAINER-DX
 
 .header-dx {
     display: flex;
-    align-items: center; /* per allineare verticalmente */
-    justify-content: center; /* per allineare orizzontalmente */
+    align-items: center;
+
     border-left: 2px solid black;
     height: 42px;
     background-color: #eaeaea;
-  }
+}
 
 .main-dx {
     flex-grow: 1;
-    background-color: aquamarine;
+    background-image: url('../img/mine.jpg');
+    background-size: contain;
+    background-position: center center;
 }
+
 
 .footer-dx {
     height: 45px;
