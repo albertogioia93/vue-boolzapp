@@ -106,7 +106,8 @@
                 <main class="main-dx">
                     <div class="messaggio-mio">{{ primoMessaggioSent }}</div>
                     <div class="messaggio-suo">{{ primoMessaggioReceived }}</div>
-                    <p v-for="(messaggio, index) in messaggi" :key="index">{{ messaggio }}</p>
+                    <p class="messaggio-invio" v-for="(messaggio, index) in messaggi" :key="index">{{ messaggio }}</p>
+                    <p class="messaggio-1sec"></p>
                 </main>
 
                 <footer class="footer-dx">

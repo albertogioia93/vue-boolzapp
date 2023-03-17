@@ -171,14 +171,22 @@ createApp({
                     ]
                 }
             ],
-            contattoSelezionato: null
+            contattoSelezionato: null,
+            
         }
     },
     methods: {
         inviaMessaggio() {
-            this.messaggi.push(this.nuovoMessaggio);
-            this.nuovoMessaggio = '';
+            if (this.nuovoMessaggio) {
+                this.messaggi.push(this.nuovoMessaggio);
+                this.nuovoMessaggio = "";
+                setTimeout(() => {
+                    this.messaggio1sec = 'ok'
+                },1000);
+            }
+           
         },
+        
         selezionaContatto(contatto) {
             this.contattoSelezionato = contatto;
             console.log('mi hai cliccato');
