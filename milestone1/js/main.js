@@ -72,8 +72,102 @@ createApp({
                             status: 'received'
                         }
                     ]
+                },
+                {
+                    nome: 'Alessandro B.',
+                    avatar: 'img/avatar_4.jpg',
+                    visible: true,
+                    messages: [
+                        {
+                            date: '10/01/2020 15:30:55',
+                            message: 'Lo sai che ha aperto una nuova pizzeria?',
+                            status: 'sent'
+                        },
+                        {
+                            date: '10/01/2020 15:50:00',
+                            message: 'Si, ma preferirei andare al cinema',
+                            status: 'received'
+                        }
+                    ]
+                },
+                {
+                    nome: 'Alessandro L.',
+                    avatar: 'img/avatar_5.jpg',
+                    visible: true,
+                    messages: [
+                        {
+                            date: '10/01/2020 15:30:55',
+                            message: 'Ricordati di chiamare la nonna',
+                            status: 'sent'
+                        },
+                        {
+                            date: '10/01/2020 15:50:00',
+                            message: 'Va bene, stasera la sento',
+                            status: 'received'
+                        }
+                    ]
+                },
+                {
+                    nome: 'Claudia',
+                    avatar: 'img/avatar_6.jpg',
+                    visible: true,
+                    messages: [
+                        {
+                            date: '10/01/2020 15:30:55',
+                            message: 'Ciao Claudia, hai novità?',
+                            status: 'sent'
+                        },
+                        {
+                            date: '10/01/2020 15:50:00',
+                            message: 'Non ancora',
+                            status: 'received'
+                        },
+                        {
+                            date: '10/01/2020 15:51:00',
+                            message: 'Nessuna nuova, buona nuova',
+                            status: 'sent'
+                        }
+                    ]
+                },
+                {
+                    nome: 'Federico',
+                    avatar: 'img/avatar_7.jpg',
+                    visible: true,
+                    messages: [
+                        {
+                            date: '10/01/2020 15:30:55',
+                            message: 'Fai gli auguri a Martina che è il suo compleanno!',
+                            status: 'sent'
+                        },
+                        {
+                            date: '10/01/2020 15:50:00',
+                            message: 'Grazie per avermelo ricordato, le scrivo subito!',
+                            status: 'received'
+                        }
+                    ]
+                },
+                {
+                    nome: 'Davide',
+                    avatar: 'img/avatar_8.jpg',
+                    visible: true,
+                    messages: [
+                        {
+                            date: '10/01/2020 15:30:55',
+                            message: 'Ciao, andiamo a mangiare la pizza stasera?',
+                            status: 'received'
+                        },
+                        {
+                            date: '10/01/2020 15:50:00',
+                            message: 'No, l\'ho già mangiata ieri, ordiniamo sushi!',
+                            status: 'sent'
+                        },
+                        {
+                            date: '10/01/2020 15:51:00',
+                            message: 'OK!!',
+                            status: 'received'
+                        }
+                    ]
                 }
-            
             ],
             contattoSelezionato: null
         }
@@ -82,6 +176,30 @@ createApp({
         selezionaContatto(contatto) {
             this.contattoSelezionato = contatto;
             console.log('mi hai cliccato');
+        }
+    },
+    computed: {
+        primoMessaggioSent() {
+            if (!this.contattoSelezionato) {
+                return '';
+            }
+            const messaggiSent = this.contattoSelezionato.messages.filter(messaggio => messaggio.status === 'sent');
+            if (messaggiSent.length > 0) {
+                return messaggiSent[0].message;
+            } else {
+                return '';
+            }
+        },
+        primoMessaggioReceived() {
+            if (!this.contattoSelezionato) {
+                return '';
+            }
+            const messaggiReceived = this.contattoSelezionato.messages.filter(messaggio => messaggio.status === 'received');
+            if (messaggiReceived.length > 0) {
+                return messaggiReceived[0].message;
+            } else {
+                return '';
+            }
         }
     }
 }).mount('#app')
