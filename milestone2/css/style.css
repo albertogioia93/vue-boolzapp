@@ -1,0 +1,263 @@
+/* 
+*************
+RESET
+*************
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+
+/* 
+*************
+MAIN
+*************
+*/
+body {
+    background: linear-gradient(#429488 0%, #429488 130px, #dbdbd3 130px, #dbdbd3 100%);
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+  
+
+/* background: linear-gradient(#429488 0%,
+            #429488 130px,
+            #dbdbd3 130px,
+            #dbdbd3 100%); */
+
+
+.container {
+    width: 925px;
+    height: 560px;
+    background-color: white;
+    margin: 20px auto 0;
+    display: flex;
+    /* border: 1px solid #b1b1b1; */
+}
+
+/* 
+*************
+MINICONTAINER-SX
+*************
+*/
+
+.minicontainer-sx {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+
+.header-sx {
+    height: 42px;
+    background-color: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.img-nome {
+    display: flex;
+    align-items: center;
+}
+
+.img-container {
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    /* background-color: red; */
+}
+
+.sofia {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.icone {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: #b1b1b1;
+}
+
+.main-sx {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+}
+
+.sezione-campanella-notifiche {
+    height: 50px;
+    padding: 10px;
+    background-color: #91dafa;
+    display: flex;
+    align-items: center;
+}
+
+.container-campanella {
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #91dafa;
+}
+
+.ricevi-notifiche {
+    font-size: 14px;
+}
+
+.cerca-chat {
+    height: 30px;
+    background-color: #eaeaea;
+    padding: 5px;
+}
+
+input {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+}
+
+.main-sx ul {
+    flex: 1;
+    /* background-color: yellow; */
+    list-style-type: none;
+    overflow-y: scroll;
+}
+
+.main-sx ul li {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    margin: 10px;
+}
+
+/* 
+*************
+MINICONTAINER-DX
+*************
+*/
+
+.minicontainer-dx {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-dx {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-left: 1px solid #b1b1b1;
+    height: 42px;
+    background-color: #eaeaea;
+    padding: 20px;
+}
+
+.foto-e-nomi-selezionati {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.foto-selezionata {
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    /* background-color: red; */
+    overflow: hidden;
+}
+
+.foto-selezionata img {
+    height: 100%;
+
+}
+
+.container-di-3icone {
+    display: flex;
+    justify-self: right;
+    gap: 10px;
+    color: #b1b1b1;
+}
+
+.main-dx {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    align-items: center;
+    background-image: url('../img/mine.jpg');
+    background-size: contain;
+    background-position: center center;
+    overflow-y: scroll;
+}
+
+.messaggio-mio {
+    height: auto;
+    max-width: 70%; 
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #d6f8bc;
+    border-radius: 5px;
+    text-align: right;
+    align-self: flex-end;
+}
+
+.messaggio-suo {
+    height: auto;
+    max-width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    border-radius: 5px;
+    text-align: left;
+    align-self: flex-start;
+}
+
+
+.footer-dx {
+    height: 45px;
+    background-color: #f3eeea;
+    display: flex;
+    align-items: center;
+}
+
+.smile-container {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-container {
+    width: 80%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+}
+
+.input-container input {
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+}
+
+
+
+.invio-container {
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
