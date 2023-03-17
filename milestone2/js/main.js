@@ -183,8 +183,8 @@ createApp({
             this.contattoSelezionato = contatto;
             console.log('mi hai cliccato');
         }
-        
-        
+
+
     },
     computed: {
         primoMessaggioSent() {
@@ -210,5 +210,5 @@ createApp({
             }
         }
     },
-   
+
 }).mount('#app')

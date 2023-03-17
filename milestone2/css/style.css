@@ -22,13 +22,6 @@ body {
     background-repeat: no-repeat;
     height: 100vh;
   }
-  
-
-/* background: linear-gradient(#429488 0%,
-            #429488 130px,
-            #dbdbd3 130px,
-            #dbdbd3 100%); */
-
 
 .container {
     width: 925px;
@@ -181,7 +174,6 @@ MINICONTAINER-DX
 
 .foto-selezionata img {
     height: 100%;
-
 }
 
 .container-di-3icone {
