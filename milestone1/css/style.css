@@ -140,12 +140,6 @@ MINICONTAINER-DX
 }
 
 .header-dx {
-    border-left: 2px solid black;
-    height: 42px;
-    background-color: #eaeaea;
-}
-
-.header-dx {
     display: flex;
     align-items: center;
 
@@ -154,11 +148,37 @@ MINICONTAINER-DX
     background-color: #eaeaea;
 }
 
+.foto-selezionata {
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    background-color: red;
+}
+
+.foto-selezionata img {
+    height: 100%;
+}
+
 .main-dx {
     flex-grow: 1;
     background-image: url('../img/mine.jpg');
     background-size: contain;
     background-position: center center;
+}
+
+.messaggio-mio {
+    height: 35px;
+    width: 180px;
+    background-color: #d6f8bc;
+    border-radius: 5px;
+}
+
+.messaggio-suo {
+    height: 35px;
+    width: 190px;
+    background-color: white;
+    border-radius: 5px;
+    
 }
 
 

@@ -61,17 +61,16 @@
                     </section>
 
                     <section class="cerca-chat">
-                        <input type="text" placeholder="cerca una chat">
+                        <input type="text" placeholder="cerca o inizia una nuova chat">
                         <!-- per mettere un font awesome dentro input di ricerca -->
                         <!-- placeholder="&#xF002; Search" style="font-family:Arial, FontAwesome;" -->
                     </section>
                     <ul>
                         <li v-for="(contatto, index) in contatti" :key="index" @click="selezionaContatto(contatto)">
-                            <img :src="contatto.avatar" :alt="contatto.nome">
-                            <div class="info-contatto">
-                                <h3>{{ contatto.nome }}</h3>
-                                <p>Ultimo messaggio</p>
-                            </div>
+                          <img :src="contatto.avatar">
+                          <div class="info-contatto">
+                            <h3>{{ contatto.nome }}</h3>
+                          </div>
                         </li>
                     </ul>
                     
@@ -81,11 +80,19 @@
 
             <!-- minicontenitore di dx -->
             <div class="minicontainer-dx">
-                <header class="header-dx" v-if="contattoSelezionato">
-                    <img :src="contattoSelezionato.avatar" alt="">
-                    <h3>{{ contattoSelezionato.nome }}</h3>
+
+                <header class="header-dx">
+                    <div class="foto-selezionata">
+                        <img v-if="contattoSelezionato" :src="contattoSelezionato.avatar">
+                    </div>
+                    <div class="nome-selezionato" v-text="contattoSelezionato ? contattoSelezionato.nome : ''"></div>
+                    
                 </header>
-                <main class="main-dx"></main>
+
+                <main class="main-dx">
+                    <div class="messaggio-mio"></div>
+                    <div class="messaggio-suo"></div>
+                </main>
                 <footer class="footer-dx"></footer>
 
             </div>
