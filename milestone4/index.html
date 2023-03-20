@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- collegamento a font awesome via CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- collegamento al mio file style.css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Boolzapp</title>
+
+</head>
+<body>
+
+    
+    
+    <!-- questo div id=app si collega all'istanza finalizzata da mount('#app') creata in main.js -->
+    <div id="app">
+
+        <!-- contenitore centrale che contiene i 2 minicontenitori affiancati -->
+        <div class="container">
+
+            <!-- minicontenitore di sx -->
+            <div class="minicontainer-sx">
+
+                <header class="header-sx">
+                    <div class="img-nome">
+                        <div class="img-container">
+                            <img class="sofia" src="img/avatar_io.jpg" alt="">
+                        </div>
+                        <div>Sofia</div>
+                    </div>
+                    <div class="icone">
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+
+                    </div>
+
+                </header>
+
+                <main class="main-sx">
+
+                    <section class="sezione-campanella-notifiche">
+                        <div class="container-campanella">
+                            <i class="fa-solid fa-bell-slash"></i>
+                        </div>
+                        <div class="ricevi-notifiche">
+                            <div>Ricevi notifiche di nuovi messaggi</div>
+                        </div>
+
+                    </section>
+
+                    <section class="cerca-chat">
+
+                        <!-- STO LAVORANDO SU QUESTO INPUT -->
+                        <input type="text" placeholder="cerca o inizia una nuova chat">
+
+                        
+                    </section>
+                    <ul>
+                        <li v-for="(contatto, index) in contatti" :key="index" @click="selezionaContatto(contatto)">
+                          <img :src="contatto.avatar">
+                          <div class="info-contatto">
+                            <h3>{{ contatto.nome }}</h3>
+                          </div>
+                        </li>
+                    </ul>
+                    
+                </main>
+
+            </div>
+
+            <!-- minicontenitore di dx -->
+            <div class="minicontainer-dx">
+
+                <header class="header-dx">
+
+                    <div class="foto-e-nomi-selezionati">
+                        <div class="foto-selezionata">
+                            <img v-if="contattoSelezionato" :src="contattoSelezionato.avatar">
+                        </div>
+                        <div class="nome-selezionato" v-text="contattoSelezionato ? contattoSelezionato.nome : ''"></div>
+                    </div>
+
+                    <div class="container-di-3icone">
+                        <div>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-paperclip"></i>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+                </header>
+
+                
+
+                <main class="main-dx">
+                    <div class="messaggio-mio">{{ primoMessaggioSent }}</div>
+                    <div class="messaggio-suo">{{ primoMessaggioReceived }}</div>
+                    <!-- HO AGGIUNTO QUESTO DIV CHE SI CREA OGNI VOLTA CHE SCRIVO IN INPUT E PREMO INVIO -->
+                    <div v-for="message in messages" :class="message.type">{{ message.text }}</div>
+                </main>
+
+                <footer class="footer-dx">
+                    <div class="smile-container">
+                        <i class="fa-regular fa-face-smile"></i>
+                    </div>
+                    <div class="input-container">
+                        <!-- HO AGGIUNTO QUESTO INPUT CHE SCATENA L'EVENTO AL PREMERE INVIO DALLA TASTIERA-->
+                        <input type="text" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="addMessage">
+                    </div>
+                    <div class="invio-container">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </div>
+                </footer>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+    <!-- collegamento al framework vue.js via CDN -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!-- collegamento al mio file main.js -->
+    <script src="js/main.js"></script>
+
+</body>
+</html>
