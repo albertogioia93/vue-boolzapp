@@ -63,12 +63,14 @@
                     <section class="cerca-chat">
 
                         <!-- STO LAVORANDO SU QUESTO INPUT -->
-                        <input type="text" placeholder="cerca o inizia una nuova chat">
+                        <!-- <input type="text" placeholder="cerca o inizia una nuova chat"> -->
+                        <input type="text" placeholder="cerca o inizia una nuova chat" @input="filtro = $event.target.value">
 
                         
                     </section>
                     <ul>
-                        <li v-for="(contatto, index) in contatti" :key="index" @click="selezionaContatto(contatto)">
+                        <!-- <li v-for="(contatto, index) in contatti" :key="index" @click="selezionaContatto(contatto)"> -->
+                        <li v-for="(contatto, index) in contattiFiltrati" :key="index" @click="selezionaContatto(contatto)">
                           <img :src="contatto.avatar">
                           <div class="info-contatto">
                             <h3>{{ contatto.nome }}</h3>

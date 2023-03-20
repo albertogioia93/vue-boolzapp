@@ -172,6 +172,7 @@ createApp({
                 }
             ],
             contattoSelezionato: null,
+            filtro: '',
         }
     },
     methods: {
@@ -200,6 +201,11 @@ createApp({
         },
     },
     computed: {
+        contattiFiltrati() {
+            return this.contatti.filter(contatto =>
+              contatto.nome.toLowerCase().includes(this.filtro.toLowerCase())
+            )
+        },
         primoMessaggioSent() {
             if (!this.contattoSelezionato) {
                 return '';
