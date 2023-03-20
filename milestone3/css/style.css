@@ -217,7 +217,7 @@ MINICONTAINER-DX
     align-self: flex-start;
 }
 
-.messaggio-invio {
+.verde {
     height: auto;
     max-width: 70%; 
     padding: 10px;
@@ -228,7 +228,7 @@ MINICONTAINER-DX
     align-self: flex-end;
 }
 
-.messaggio-1sec {
+.bianco {
     height: auto;
     max-width: 70%;
     padding: 10px;

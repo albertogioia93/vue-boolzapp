@@ -6,8 +6,8 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
-            nuovoMessaggio: '',
-            messaggi: [],
+            newMessage: '',
+            messages: [],
             contatti: [
                 {
                     nome: 'Michele',
@@ -172,21 +172,31 @@ createApp({
                 }
             ],
             contattoSelezionato: null,
-            
+
         }
     },
     methods: {
-        inviaMessaggio() {
-            if (this.nuovoMessaggio) {
-                this.messaggi.push(this.nuovoMessaggio);
-                this.nuovoMessaggio = "";
+
+        addMessage() {
+            if (this.newMessage !== '') {
+                // per aggiungere un messaggio dopo che premo invio e creare un div con dentro quel messaggio
+                this.messages.push({
+                    text: this.newMessage,
+                    type: 'verde'
+                });
+
+                // il bot mi risponde dopo 1 secondo da quando ho premuto invio
                 setTimeout(() => {
-                    this.messaggio1sec = 'ok'
-                },1000);
+                    this.messages.push({
+                        text: 'ok',
+                        type: 'bianco'
+                    });
+                }, 1000);
+
+                // Reset input
+                this.newMessage = '';
             }
-           
         },
-        
         selezionaContatto(contatto) {
             this.contattoSelezionato = contatto;
             console.log('mi hai cliccato');

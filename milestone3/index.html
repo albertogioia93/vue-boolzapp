@@ -103,11 +103,13 @@
                     </div>
                 </header>
 
+                
+
                 <main class="main-dx">
                     <div class="messaggio-mio">{{ primoMessaggioSent }}</div>
                     <div class="messaggio-suo">{{ primoMessaggioReceived }}</div>
-                    <p class="messaggio-invio" v-for="(messaggio, index) in messaggi" :key="index">{{ messaggio }}</p>
-                    <p class="messaggio-1sec"></p>
+                    <!-- HO AGGIUNTO QUESTO DIV CHE SI CREA OGNI VOLTA CHE SCRIVO IN INPUT E PREMO INVIO -->
+                    <div v-for="message in messages" :class="message.type">{{ message.text }}</div>
                 </main>
 
                 <footer class="footer-dx">
@@ -115,7 +117,8 @@
                         <i class="fa-regular fa-face-smile"></i>
                     </div>
                     <div class="input-container">
-                        <input type="text" placeholder="Scrivi un messaggio" v-model="nuovoMessaggio" @keyup.enter="inviaMessaggio">
+                        <!-- HO AGGIUNTO QUESTO INPUT CHE SCATENA L'EVENTO AL PREMERE INVIO DALLA TASTIERA-->
+                        <input type="text" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="addMessage">
                     </div>
                     <div class="invio-container">
                         <i class="fa-solid fa-paper-plane"></i>
